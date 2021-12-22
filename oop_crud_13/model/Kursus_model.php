@@ -17,6 +17,13 @@ class Kursus_model {
         return $hasil = $row->fetchAll();
     }
 
+    function tampil_data2()
+    {
+        $row = $this->db->prepare("SELECT * from tbl_jenis_paket");
+        $row->execute();
+        return $hasil = $row->fetchAll();
+    }
+
     function getData($id){
         $row = $this->db->prepare("SELECT * FROM tbl_anggota join tbl_kontrak_mapel on tbl_anggota.id_anggota=tbl_kontrak_mapel.id_anggota WHERE tbl_anggota.id_anggota='$id' 
         group by tbl_anggota.id_anggota");

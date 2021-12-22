@@ -22,7 +22,18 @@
                     header("Location:login.php");
                 }
         }
-            function getData($id){
+
+        function index2(){
+            session_start();
+                if(!empty($_SESSION)){
+                    $kursus = $this->model->tampil_data2();
+                    return $kursus;
+                }else{
+                    // header("Location:login.php");
+                }
+        }
+        
+        function getData($id){
              $kursus = $this->model->getData($id);
              return $kursus;
         }
@@ -169,9 +180,11 @@
         }
 
         function simpanJenis(){
-            $jenis_paket = $_POST['jenisPaket'];
+            $nama_paket = $_POST['nama_paket'];
+            $harga = $_POST['harga'];
             $data[] = array(
-                'jenis_paket' => $jenis_paket,
+                'nama_paket' => $nama_paket,
+                'harga' => $harga,
                 );
             
             $result = $this->model->simpanDataPaket($data);

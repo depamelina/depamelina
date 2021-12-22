@@ -9,10 +9,10 @@
     <hr class="horizontal light mt-0 mb-2">
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white bg-gradient-primary " href="index2.php">
+      <li class="nav-item">
+          <a class="nav-link text-white " href="index2.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">dashboard</i>
+              <i class="material-icons opacity-10">home</i>
             </div>
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
@@ -20,19 +20,20 @@
         <li class="nav-item">
           <a class="nav-link text-white" href="content.php">
             <div class="text-white text-center active me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
+              <i class="material-icons opacity-10">group</i>
             </div>
             <span class="nav-link-text ms-1">Anggota</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="logout.php">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">logout</i>
+        <li class="nav-item ">
+          <a class="nav-link text-white bg-gradient-primary" href="add_paket.php">
+            <div class="text-white text-center active me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">storage</i>
             </div>
-            <span class="nav-link-text ms-1">Logout</span>
+            <span class="nav-link-text ms-1">Paket</span>
           </a>
         </li>
+
        
        
       </ul>

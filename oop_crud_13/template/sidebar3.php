@@ -12,7 +12,7 @@
         <li class="nav-item">
           <a class="nav-link text-white bg-gradient-primary " href="index2.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">dashboard</i>
+              <i class="material-icons opacity-10">home</i>
             </div>
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
@@ -20,9 +20,17 @@
         <li class="nav-item">
           <a class="nav-link text-white" href="content.php">
             <div class="text-white text-center active me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">table_view</i>
+              <i class="material-icons opacity-10">group</i>
             </div>
             <span class="nav-link-text ms-1">Anggota</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="add_paket.php">
+            <div class="text-white text-center active me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">storage</i>
+            </div>
+            <span class="nav-link-text ms-1">Paket</span>
           </a>
         </li>
         <!-- <li class="nav-item">

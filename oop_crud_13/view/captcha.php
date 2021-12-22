@@ -1,35 +1,26 @@
 <?php
-//mengaktifkan session
+include '../controller/Auth.php';
+$ctrl = new Auth;
 session_start();
- 
-header("Content-type: image/png");
- 
-// menentukan session
-$_SESSION["Captcha"]="";
- 
-// membuat gambar dengan menentukan ukuran
-$gbr = imagecreate(200, 50);
 
-//warna background captcha
-imagecolorallocate($gbr, 69, 179, 157);
+$code = $ctrl->acakCaptcha();
+$_SESSION["code"] = $code;
  
-// pengaturan font captcha
-$color = imagecolorallocate($gbr, 253, 252, 252);
-$font = "Allura-Regular.ttf"; 
-$ukuran_font = 20;
-$posisi = 32;
-// membuat nomor acak dan ditampilkan pada gambar
-for($i=0;$i<=5;$i++) {
-	// jumlah karakter
-	$angka=rand(0, 9);
+//lebar dan tinggi captcha
+$wh = imagecreatetruecolor(173, 50);
  
-	$_SESSION["Captcha"].=$angka;
+//background color biru
+$bgc = imagecolorallocate($wh, 22, 86, 165);
  
-	$kemiringan= rand(20, 20);
- 	
-	imagettftext($gbr, $ukuran_font, $kemiringan, 8+15*$i, $posisi, $color, $font, $angka);	
-}
-//untuk membuat gambar 
-imagepng($gbr); 
-imagedestroy($gbr);
+//text color abu-abu
+$fc = imagecolorallocate($wh, 223, 230, 233);
+imagefill($wh, 0, 0, $bgc);
+ 
+//( $image , $fontsize , $string , $fontcolor )
+imagestring($wh, 10, 50, 15,  $code, $fc);
+ 
+//buat gambar
+header('content-type: image/jpg');
+imagejpeg($wh);
+imagedestroy($wh);
 ?>

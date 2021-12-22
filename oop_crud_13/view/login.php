@@ -77,6 +77,15 @@ $ctrl = new Auth();
         <strong>Gagal!</strong> Anda Gagal Login
          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
+	  
+	  <?php 
+       }else if ($pesan=='gagal' && $frm =='captcha') {
+     ?>
+
+     <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Gagal!</strong> Captcha Salah
+         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
       
       
       <?php 
@@ -118,10 +127,11 @@ $ctrl = new Auth();
 		            </div>
 					
 					<div class="form-group">
-						<img src="captcha.php" alt="gambar"/>
+						<label class="label" for="password">Captcha</label><br>
+						<span class="center"><img src="captcha.php" alt="gambar"/></span>
                     </div>
                     <div class="form-group">
-                    <input class="form-control" name="kode" value="" placeholder="kode captcha" maxlength="5"/>
+                    <input class="form-control" name="code" value="" placeholder="Kode Captcha" maxlength="5"/>
                 	</div>
 
 					<div class="form-group">

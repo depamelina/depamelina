@@ -218,7 +218,7 @@ $ctrl->simpanKursus();
 					type: 'success',
 					title: 'Berhasil di simpan!',
 					text: 'Tunggu sejenak',
-					timer: 10000,
+					timer: 20000,
 					showCancelButton: false,
 					showConfirmButton: false
 					})
